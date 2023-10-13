@@ -1,27 +1,42 @@
 # React Chrome Extension Boilerplate
+크롬 확장프로그렘 개발환경에서 리엑트와 타입스크립트를 사용하기 위해 세팅된 보일러 플레이트입니다.
 
-## Getting Started
+<br>
 
-1. `npm i` to install dependancies
-2. `npm start` to start running the fast development mode Webpack build process that bundle files into the `dist` folder
-3. `npm i --save-dev <package_name>` to install new packages
+## 📦 보일러 플레이트 구조 
+```
+src
+├── background
+│   └──  background.ts
+├── contentScript
+│   └──  contentScript.ts
+├── options
+│   └──  options.tsx
+├── popup
+│   └──  popup.tsx
+├── static
+│   ├──  icon.png
+│   └──  manifest.json
+├── styles   
+└── utils
+```
 
-## Loading The Chrome Extension
+## 📂 static
 
-1. Open Chrome and navigate to `chrome://extensions/`
-2. Toggle on `Developer mode` in the top right corner
-3. Click `Load unpacked`
-4. Select the entire `dist` folder
+> static 내부에 있는 파일들은 모두 dist 내부로 바로 복사됩니다.
+<br>
 
-# Important Initial Steps
+## Development Build
+```
+npm start
+``` 
 
-1. `git init` to start a new git repo for tracking your changes, do an initial base commit with all the default files
-2. Update `package.json`, important fields include `author`, `version`, `name` and `description`
-3. Update `manifest.json`, important fields include `version`, `name` and `description`
-4. Update `webpack.commmon.js`, the title in the `getHtmlPlugins` function should be your extension name
+## Production Build
+```
+npm run build
+``` 
 
-# Production Build
-
-1. `npm run build` to generate a minimized production build in the `dist` folder
-2. ZIP the entire `dist` folder (e.g. `dist.zip`)
-3. Publish the ZIP file on the Chrome Web Store Developer Dashboard!
+## 🎁 Getting Started
+```
+ git clone https://github.com/HJ2Yoon/react-chrome-extension.git ./
+```
